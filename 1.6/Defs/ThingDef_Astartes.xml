@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Power Sword -->
+  <!--<ThingDef ParentName="BEWH_AstartesMeleeBase">
+    <defName>BEWH_BlackSword</defName>
+    <label>black sword</label>
+    <description>...</description>
+    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
+    <meleeHitSound>BEWH_SFX_PowerswordHit</meleeHitSound>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_Powersword</texPath>
+      <shaderType>BEWH_CutoutThreeColor</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.15</drawSize>
+    </graphicData>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>1.2</armorPenetration>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>-->
+
+</Defs>
