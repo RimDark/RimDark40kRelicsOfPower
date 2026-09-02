@@ -16,7 +16,7 @@
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
+        <DebugType>none</DebugType>
         <Optimize>true</Optimize>
         <OutputPath>../../Assemblies\</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
@@ -43,6 +43,15 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Relics40kMod.cs" />
+        <Compile Include="Compat\MankindsFinestCompat.cs" />
+        <Compile Include="Comps\CompProperties_UseEffectGeneCryptCatalyst.cs" />
+        <Compile Include="Comps\CompProperties_UseEffectBloodChalice.cs" />
+        <Compile Include="Comps\CompUseEffect_BloodChalice.cs" />
+        <Compile Include="Comps\CompUseEffect_GeneCryptCatalyst.cs" />
+        <Compile Include="DefModExtensions\DefModExtension_BloodChalice.cs" />
+        <Compile Include="DefModExtensions\DefModExtension_GeneCryptCatalyst.cs" />
+        <Compile Include="Hediffs\Hediff_FrozenInstability.cs" />
+        <Compile Include="Workers\ThoughtWorker_FrozenInstability.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
