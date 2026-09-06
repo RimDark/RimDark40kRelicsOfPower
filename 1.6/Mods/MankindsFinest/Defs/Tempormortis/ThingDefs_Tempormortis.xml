@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Relics40k_Tempormortis</defName>
+    <label>tempormortis</label>
+    <description>An arcane device in the shape of a great hourglass, carried by the Judiciars of the Primaris Chapters as they walk the path to the Chaplaincy.\n\nWhen the sands are turned, time itself thickens around the bearer. Foes within reach find their limbs heavy and their blows late, while the Judiciar moves through the moment untouched - and passes sentence at his leisure.\n\nOnly a member of the Chaplaincy may turn the sands.</description>
+    <graphicData>
+      <texPath>Things/Item/Relic/RelicInertPendant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+      <color>(150, 190, 255)</color>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>4</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <MarketValue>25000</MarketValue>
+      <EquipDelay>2</EquipDelay>
+      <Beauty>8</Beauty>
+    </statBases>
+    <tradeability>None</tradeability>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <abilities>
+        <li>Relics40k_TempormortisTurnTheSands</li>
+      </abilities>
+    </apparel>
+    <comps>
+      <li Class="Relics40k.CompProperties_TemporalFieldDrawer">
+        <activeHediff>Relics40k_TempormortisActive</activeHediff>
+        <ringColor>(0.55, 0.7, 1.0, 0.6)</ringColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

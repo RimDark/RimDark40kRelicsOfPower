@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- On the bearer while the sands run. -->
+  <HediffDef>
+    <defName>Relics40k_TempormortisActive</defName>
+    <label>sands turned</label>
+    <description>The Tempormortis is inverted. Time thickens around this warrior; everything hostile within reach is slowed while it runs.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>1</initialSeverity>
+    <defaultLabelColor>(0.75, 0.85, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="Relics40k.HediffCompProperties_TemporalAura">
+        <radius>5.9</radius>
+        <pulseIntervalTicks>30</pulseIntervalTicks>
+        <slowHediff>Relics40k_TemporalDilation</slowHediff>
+        <slowLingerTicks>90</slowLingerTicks>
+        <affectHostileOnly>true</affectHostileOnly>
+        <affectDowned>false</affectDowned>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- On foes inside the field. Refreshed every pulse; fades 1.5s after leaving. -->
+  <HediffDef>
+    <defName>Relics40k_TemporalDilation</defName>
+    <label>temporal dilation</label>
+    <description>Caught in the field of a Tempormortis. Every movement is dragged out and every blow lands a heartbeat late - and there is no slipping a strike that has already fallen.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>1</initialSeverity>
+    <defaultLabelColor>(0.55, 0.7, 1.0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.35</MoveSpeed>
+          <MeleeCooldownFactor>2.0</MeleeCooldownFactor>
+          <RangedCooldownFactor>2.0</RangedCooldownFactor>
+          <AimingDelayFactor>2.0</AimingDelayFactor>
+          <MeleeDodgeChance>0</MeleeDodgeChance>
+        </statFactors>
+        <statOffsets>
+          <MeleeHitChance>-6</MeleeHitChance>
+        </statOffsets>
+        <!-- Fights Last: melee damage types only. Bullets, arrows, explosions and fire are untouched. -->
+        <damageFactors>
+          <Cut>1.25</Cut>
+          <Stab>1.25</Stab>
+          <Blunt>1.25</Blunt>
+          <Scratch>1.25</Scratch>
+          <Poke>1.25</Poke>
+          <Bite>1.25</Bite>
+        </damageFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>90</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

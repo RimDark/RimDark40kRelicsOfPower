@@ -32,6 +32,10 @@
           <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
           <Private>False</Private>
         </Reference>
+        <Reference Include="Core40k">
+          <HintPath>..\..\..\..\Rimdark40kFramework\1.6\Assemblies\Core40k.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
@@ -48,9 +52,13 @@
         <Compile Include="Comps\CompProperties_UseEffectBloodChalice.cs" />
         <Compile Include="Comps\CompUseEffect_BloodChalice.cs" />
         <Compile Include="Comps\CompUseEffect_GeneCryptCatalyst.cs" />
+        <Compile Include="Comps\CompProperties_TemporalFieldDrawer.cs" />
+        <Compile Include="Comps\Comp_TemporalFieldDrawer.cs" />
         <Compile Include="DefModExtensions\DefModExtension_BloodChalice.cs" />
         <Compile Include="DefModExtensions\DefModExtension_GeneCryptCatalyst.cs" />
         <Compile Include="Hediffs\Hediff_FrozenInstability.cs" />
+        <Compile Include="Hediffs\HediffCompProperties_TemporalAura.cs" />
+        <Compile Include="Hediffs\HediffComp_TemporalAura.cs" />
         <Compile Include="Workers\ThoughtWorker_FrozenInstability.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
